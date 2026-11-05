@@ -1,0 +1,185 @@
+D2 PERFORMANCE TEST RESULTS
+
+Experiment 1: Controlled Packet Loss
+Packet loss introduced: 10% using Linux tc netem
+Total original packets: 60
+
+HIGH TRAFFIC:
+Original packets: 30
+Initially missing: 2
+Initial loss: 6.67%
+Retransmission attempts: 2
+Final missing: 0
+Final loss: 0%
+Reported recovery duration: 1.27 ms
+
+NORMAL TRAFFIC:
+Original packets: 30
+Initially missing: 3
+Initial loss: 10.00%
+Retransmission attempts: 3
+Final missing: 0
+Final loss: 0%
+Reported recovery duration: 3.04 ms
+
+Total packets initially missing: 5
+Total packets recovered: 5
+Final unrecovered packets: 0
+Total test duration: 13.93 seconds
+
+Experiment 2: Traffic Prioritization
+HIGH traffic: UDP destination port 5003, queue 1
+NORMAL traffic: UDP destination port 5004, queue 2
+Queue statistics verified using OVS queue-stats.
+Queue errors: 0
+
+Experiment 3: Dynamic SDN Rerouting
+Failed link: s1-s3
+Alternate route: h1-s1-s2-s4-h2
+Controller detected topology change and installed alternate forwarding rules.
+Communication continued after rerouting.
+
+Note: Comparative throughput and jitter under congestion were subsequently measured in Experiment 6.
+
+6. HIGH vs NORMAL Traffic Performance Comparison
+
+Tool: iperf3 over UDP
+Topology: Mininet diamond topology
+Duration: 20 seconds
+Offered rate: 8 Mbps per traffic class
+HIGH traffic: UDP destination port 5003, Queue 1
+NORMAL traffic: UDP destination port 5004, Queue 2
+
+Receiver-side results:
+- HIGH throughput: 7.04 Mbps
+- NORMAL throughput: 3.80 Mbps
+- HIGH jitter: 1.454 ms
+- NORMAL jitter: 3.808 ms
+- HIGH packet loss: 0%
+- NORMAL packet loss: 0%
+
+Queue configuration:
+- HIGH minimum rate: 7 Mbps
+- NORMAL minimum rate: 1 Mbps
+- Shared QoS maximum rate: 10 Mbps
+
+OVS queue statistics on s1-eth2:
+- Queue 1: 13,122 packets, 19,505,137 bytes
+- Queue 2: 6,633 packets, 9,835,163 bytes
+
+Observation:
+HIGH traffic achieved approximately 1.85 times the receiver throughput of NORMAL traffic and had lower jitter in this experiment. The queue counters confirm that traffic was classified into separate queues. Both traffic classes experienced 0% packet loss in this run.
+
+Note: These are measured results from one experimental run and may vary across runs.
+
+
+Experiment 7: Baseline vs Proposed Performance Comparison
+
+Test conditions:
+- Mininet diamond topology
+- Two simultaneous UDP flows
+- Offered rate: 8 Mbps per flow
+- Duration: 20 seconds
+- Measurements taken from iperf3 receiver summaries
+- One run per configuration
+
+BASELINE:
+Controller: controller_baseline.py
+Queue prioritization: Disabled
+Switch interface shaping: 10 Mbps TBF
+
+HIGH (UDP port 5003):
+Throughput: 5.84 Mbps
+Jitter: 2.015 ms
+Packet loss: 26%
+Lost datagrams: 3654 of 13803
+
+NORMAL (UDP port 5004):
+Throughput: 5.76 Mbps
+Jitter: 0.366 ms
+Packet loss: 28%
+Lost datagrams: 3862 of 13813
+
+PROPOSED:
+Controller: controller.py
+HIGH: Queue 1, minimum rate 7 Mbps
+NORMAL: Queue 2, minimum rate 1 Mbps
+QoS maximum rate: 10 Mbps
+
+HIGH (UDP port 5003):
+Throughput: 6.86 Mbps
+Jitter: 1.573 ms
+Packet loss: 0%
+Lost datagrams: 0 of 12611
+
+NORMAL (UDP port 5004):
+Throughput: 2.66 Mbps
+Jitter: 4.973 ms
+Packet loss: 0%
+Lost datagrams: 0 of 4725
+
+COMPARISON:
+- Baseline throughput was nearly equal for both traffic classes.
+- Proposed HIGH traffic achieved 6.86 Mbps compared with 5.84 Mbps
+  in the baseline run.
+- Proposed NORMAL traffic received 2.66 Mbps, reflecting the
+  prioritization of HIGH traffic.
+- Both proposed flows recorded 0% packet loss in this run.
+- NORMAL traffic jitter increased from 0.366 ms to 4.973 ms.
+
+OpenFlow verification:
+- UDP destination port 5003 used set_queue:1.
+- UDP destination port 5004 used set_queue:2.
+- Non-zero packet counters were observed for both queue rules.
+
+The comparison represents one run per configuration. Results may vary
+between runs; repeated trials would be needed for statistical conclusions.
+
+
+============================================================
+EXPERIMENT 8: END-TO-END UDP LOSS DETECTION AND SDN REROUTING
+============================================================
+
+Test conditions:
+- Mininet diamond topology.
+- 30% artificial packet loss on s1-eth2.
+- HIGH UDP traffic: port 5003.
+- NORMAL UDP traffic: port 5004.
+
+HIGH traffic:
+- Original packets: 30
+- Initially missing: 12
+- Initial loss: 40.00%
+- Retransmission attempts: 19
+- Final missing: 0
+- Final loss: 0.00%
+- Recovery duration: 620.25 ms
+
+NORMAL traffic:
+- Original packets: 30
+- Initially missing: 11
+- Initial loss: 36.67%
+- Retransmission attempts: 13
+- Final missing: 0
+- Final loss: 0.00%
+- Recovery duration: 619.84 ms
+
+SDN integration:
+- UDP client notified the controller after detecting packet loss.
+- Controller changed route preference away from s1-s2.
+- Alternate route installed: s1 -> s3 -> s4.
+- s1 flow table confirmed output through s1-eth3 towards s3.
+- All 23 initially missing packets were recovered.
+
+Final connectivity:
+- Artificial packet loss removed.
+- pingall: 0% dropped (2/2 received).
+
+Evidence:
+integrated_client.log
+integrated_server.log
+integrated_flows_s1.txt
+integrated_flows_s3.txt
+integrated_flows_s4.txt
+
+============================================================

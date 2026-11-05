@@ -1,0 +1,54 @@
+Dual-class measured UDP server listening
+HIGH traffic: port 5003
+NORMAL traffic: port 5004
+HIGH: Initially missing [3, 5, 15, 16, 18, 20, 22, 23, 24, 27, 28, 29]
+NORMAL: Initially missing [1, 2, 3, 5, 6, 14, 15, 21, 22, 26, 29]
+HIGH: Missing packet 3; NACK sent
+HIGH: Missing packet 5; NACK sent
+HIGH: Missing packet 15; NACK sent
+HIGH: Missing packet 16; NACK sent
+HIGH: Missing packet 18; NACK sent
+HIGH: Missing packet 20; NACK sent
+HIGH: Missing packet 22; NACK sent
+HIGH: Missing packet 23; NACK sent
+HIGH: Missing packet 24; NACK sent
+HIGH: Missing packet 27; NACK sent
+HIGH: Missing packet 28; NACK sent
+HIGH: Missing packet 29; NACK sent
+NORMAL: Missing packet 1; NACK sent
+NORMAL: Missing packet 2; NACK sent
+NORMAL: Missing packet 3; NACK sent
+NORMAL: Missing packet 5; NACK sent
+NORMAL: Missing packet 6; NACK sent
+NORMAL: Missing packet 14; NACK sent
+NORMAL: Missing packet 15; NACK sent
+NORMAL: Missing packet 21; NACK sent
+NORMAL: Missing packet 22; NACK sent
+NORMAL: Missing packet 26; NACK sent
+NORMAL: Missing packet 29; NACK sent
+HIGH: Missing packet 5; NACK sent
+HIGH: Missing packet 15; NACK sent
+HIGH: Missing packet 16; NACK sent
+HIGH: Missing packet 18; NACK sent
+HIGH: Missing packet 22; NACK sent
+HIGH: Missing packet 23; NACK sent
+HIGH: Missing packet 29; NACK sent
+NORMAL: Missing packet 2; NACK sent
+NORMAL: Missing packet 3; NACK sent
+
+========== HIGH SERVER SUMMARY ==========
+Total packets: 30
+Initially missing: 12
+Recovered by retransmission: 12
+Final missing: 0
+Initial loss: 40.00%
+Final loss: 0.00%
+
+========== NORMAL SERVER SUMMARY ==========
+Total packets: 30
+Initially missing: 11
+Recovered by retransmission: 11
+Final missing: 0
+Initial loss: 36.67%
+Final loss: 0.00%
+Both UDP traffic classes completed.

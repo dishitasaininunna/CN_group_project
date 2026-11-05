@@ -1,0 +1,188 @@
+Starting dual-class measured SDN-UDP test
+HIGH traffic: UDP port 5003
+NORMAL traffic: UDP port 5004
+HIGH: Sent original packet 1
+NORMAL: Sent original packet 1
+HIGH: ACK received for packet 1 (ORIGINAL)
+HIGH: Sent original packet 2
+NORMAL: Sent original packet 2
+HIGH: ACK received for packet 2 (ORIGINAL)
+HIGH: Sent original packet 3
+NORMAL: Sent original packet 3
+HIGH: Sent original packet 4
+NORMAL: Sent original packet 4
+HIGH: ACK received for packet 4 (ORIGINAL)
+NORMAL: ACK received for packet 4 (ORIGINAL)
+HIGH: Sent original packet 5
+NORMAL: Sent original packet 5
+HIGH: Sent original packet 6
+NORMAL: Sent original packet 6
+HIGH: ACK received for packet 6 (ORIGINAL)
+HIGH: Sent original packet 7
+NORMAL: Sent original packet 7
+HIGH: ACK received for packet 7 (ORIGINAL)
+NORMAL: ACK received for packet 7 (ORIGINAL)
+HIGH: Sent original packet 8
+NORMAL: Sent original packet 8
+HIGH: ACK received for packet 8 (ORIGINAL)
+NORMAL: ACK received for packet 8 (ORIGINAL)
+HIGH: Sent original packet 9
+NORMAL: Sent original packet 9
+HIGH: ACK received for packet 9 (ORIGINAL)
+NORMAL: ACK received for packet 9 (ORIGINAL)
+HIGH: Sent original packet 10
+NORMAL: Sent original packet 10
+HIGH: ACK received for packet 10 (ORIGINAL)
+NORMAL: ACK received for packet 10 (ORIGINAL)
+HIGH: Sent original packet 11
+NORMAL: Sent original packet 11
+HIGH: ACK received for packet 11 (ORIGINAL)
+NORMAL: ACK received for packet 11 (ORIGINAL)
+HIGH: Sent original packet 12
+NORMAL: Sent original packet 12
+HIGH: ACK received for packet 12 (ORIGINAL)
+NORMAL: ACK received for packet 12 (ORIGINAL)
+HIGH: Sent original packet 13
+NORMAL: Sent original packet 13
+HIGH: ACK received for packet 13 (ORIGINAL)
+NORMAL: ACK received for packet 13 (ORIGINAL)
+HIGH: Sent original packet 14
+NORMAL: Sent original packet 14
+HIGH: ACK received for packet 14 (ORIGINAL)
+HIGH: Sent original packet 15
+NORMAL: Sent original packet 15
+HIGH: Sent original packet 16
+NORMAL: Sent original packet 16
+NORMAL: ACK received for packet 16 (ORIGINAL)
+HIGH: Sent original packet 17
+NORMAL: Sent original packet 17
+HIGH: ACK received for packet 17 (ORIGINAL)
+NORMAL: ACK received for packet 17 (ORIGINAL)
+HIGH: Sent original packet 18
+NORMAL: Sent original packet 18
+NORMAL: ACK received for packet 18 (ORIGINAL)
+HIGH: Sent original packet 19
+NORMAL: Sent original packet 19
+HIGH: ACK received for packet 19 (ORIGINAL)
+NORMAL: ACK received for packet 19 (ORIGINAL)
+HIGH: Sent original packet 20
+NORMAL: Sent original packet 20
+NORMAL: ACK received for packet 20 (ORIGINAL)
+HIGH: Sent original packet 21
+NORMAL: Sent original packet 21
+HIGH: ACK received for packet 21 (ORIGINAL)
+HIGH: Sent original packet 22
+NORMAL: Sent original packet 22
+HIGH: Sent original packet 23
+NORMAL: Sent original packet 23
+NORMAL: ACK received for packet 23 (ORIGINAL)
+HIGH: Sent original packet 24
+NORMAL: Sent original packet 24
+NORMAL: ACK received for packet 24 (ORIGINAL)
+HIGH: Sent original packet 25
+NORMAL: Sent original packet 25
+HIGH: ACK received for packet 25 (ORIGINAL)
+NORMAL: ACK received for packet 25 (ORIGINAL)
+HIGH: Sent original packet 26
+NORMAL: Sent original packet 26
+HIGH: ACK received for packet 26 (ORIGINAL)
+HIGH: Sent original packet 27
+NORMAL: Sent original packet 27
+NORMAL: ACK received for packet 27 (ORIGINAL)
+HIGH: Sent original packet 28
+NORMAL: Sent original packet 28
+NORMAL: ACK received for packet 28 (ORIGINAL)
+HIGH: Sent original packet 29
+NORMAL: Sent original packet 29
+HIGH: Sent original packet 30
+NORMAL: Sent original packet 30
+HIGH: ACK received for packet 30 (ORIGINAL)
+NORMAL: ACK received for packet 30 (ORIGINAL)
+SDN controller notified: UDP packet loss detected
+HIGH: Retransmission attempt 1 for packet 3
+HIGH: Retransmission attempt 2 for packet 5
+HIGH: Retransmission attempt 3 for packet 15
+HIGH: Retransmission attempt 4 for packet 16
+HIGH: Retransmission attempt 5 for packet 18
+HIGH: Retransmission attempt 6 for packet 20
+HIGH: Retransmission attempt 7 for packet 22
+HIGH: Retransmission attempt 8 for packet 23
+HIGH: Retransmission attempt 9 for packet 24
+HIGH: Retransmission attempt 10 for packet 27
+HIGH: Retransmission attempt 11 for packet 28
+HIGH: Retransmission attempt 12 for packet 29
+NORMAL: Retransmission attempt 1 for packet 1
+NORMAL: Retransmission attempt 2 for packet 2
+NORMAL: Retransmission attempt 3 for packet 3
+NORMAL: Retransmission attempt 4 for packet 5
+NORMAL: Retransmission attempt 5 for packet 6
+NORMAL: Retransmission attempt 6 for packet 14
+NORMAL: Retransmission attempt 7 for packet 15
+NORMAL: Retransmission attempt 8 for packet 21
+NORMAL: Retransmission attempt 9 for packet 22
+NORMAL: Retransmission attempt 10 for packet 26
+NORMAL: Retransmission attempt 11 for packet 29
+HIGH: ACK received for packet 3 (RETRANSMISSION)
+NORMAL: ACK received for packet 1 (RETRANSMISSION)
+HIGH: ACK received for packet 20 (RETRANSMISSION)
+NORMAL: ACK received for packet 5 (RETRANSMISSION)
+HIGH: ACK received for packet 24 (RETRANSMISSION)
+NORMAL: ACK received for packet 6 (RETRANSMISSION)
+HIGH: ACK received for packet 27 (RETRANSMISSION)
+NORMAL: ACK received for packet 14 (RETRANSMISSION)
+HIGH: ACK received for packet 28 (RETRANSMISSION)
+NORMAL: ACK received for packet 15 (RETRANSMISSION)
+NORMAL: ACK received for packet 21 (RETRANSMISSION)
+NORMAL: ACK received for packet 22 (RETRANSMISSION)
+NORMAL: ACK received for packet 26 (RETRANSMISSION)
+NORMAL: ACK received for packet 29 (RETRANSMISSION)
+HIGH: Retransmission attempt 13 for packet 5
+HIGH: Retransmission attempt 14 for packet 15
+HIGH: Retransmission attempt 15 for packet 16
+HIGH: Retransmission attempt 16 for packet 18
+HIGH: Retransmission attempt 17 for packet 22
+HIGH: Retransmission attempt 18 for packet 23
+HIGH: Retransmission attempt 19 for packet 29
+NORMAL: Retransmission attempt 12 for packet 2
+NORMAL: Retransmission attempt 13 for packet 3
+HIGH: ACK received for packet 5 (RETRANSMISSION)
+NORMAL: ACK received for packet 2 (RETRANSMISSION)
+HIGH: ACK received for packet 15 (RETRANSMISSION)
+NORMAL: ACK received for packet 3 (RETRANSMISSION)
+HIGH: ACK received for packet 16 (RETRANSMISSION)
+HIGH: ACK received for packet 18 (RETRANSMISSION)
+HIGH: ACK received for packet 22 (RETRANSMISSION)
+HIGH: ACK received for packet 23 (RETRANSMISSION)
+HIGH: ACK received for packet 29 (RETRANSMISSION)
+HIGH: Final server summary received
+HIGH: Final server summary received
+HIGH: Final server summary received
+HIGH: Final server summary received
+HIGH: Final server summary received
+NORMAL: Final server summary received
+
+========== HIGH TRAFFIC SUMMARY ==========
+Original packets: 30
+Packets acknowledged: 30/30
+Retransmitted sequences: [3, 5, 15, 16, 18, 20, 22, 23, 24, 27, 28, 29]
+Retransmission attempts: 19
+Initially missing: 12/30
+Initial loss: 40.00%
+Final missing: 0
+Final loss: 0.00%
+Recovery duration: 620.25 ms
+RESULT: All packets recovered.
+
+========== NORMAL TRAFFIC SUMMARY ==========
+Original packets: 30
+Packets acknowledged: 30/30
+Retransmitted sequences: [1, 2, 3, 5, 6, 14, 15, 21, 22, 26, 29]
+Retransmission attempts: 13
+Initially missing: 11/30
+Initial loss: 36.67%
+Final missing: 0
+Final loss: 0.00%
+Recovery duration: 619.84 ms
+RESULT: All packets recovered.
+
+Total test duration: 14.64 seconds

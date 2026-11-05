@@ -1,0 +1,12 @@
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x0, duration=209.249s, table=0, n_packets=0, n_bytes=0, priority=20,udp,dl_dst=00:00:00:00:00:01,tp_dst=5003 actions=set_queue:1,output:1
+ cookie=0x0, duration=209.249s, table=0, n_packets=0, n_bytes=0, priority=20,udp,dl_dst=00:00:00:00:00:01,tp_dst=5004 actions=set_queue:2,output:1
+ cookie=0x0, duration=209.236s, table=0, n_packets=9, n_bytes=707, priority=20,udp,dl_dst=00:00:00:00:00:02,tp_dst=5003 actions=set_queue:1,output:2
+ cookie=0x0, duration=209.236s, table=0, n_packets=4, n_bytes=284, priority=20,udp,dl_dst=00:00:00:00:00:02,tp_dst=5004 actions=set_queue:2,output:2
+ cookie=0x0, duration=209.249s, table=0, n_packets=37, n_bytes=2204, priority=20,udp,dl_dst=00:00:00:00:00:01,tp_src=5003 actions=set_queue:1,output:1
+ cookie=0x0, duration=209.249s, table=0, n_packets=30, n_bytes=1865, priority=20,udp,dl_dst=00:00:00:00:00:01,tp_src=5004 actions=set_queue:2,output:1
+ cookie=0x0, duration=209.236s, table=0, n_packets=0, n_bytes=0, priority=20,udp,dl_dst=00:00:00:00:00:02,tp_src=5003 actions=set_queue:1,output:2
+ cookie=0x0, duration=209.236s, table=0, n_packets=0, n_bytes=0, priority=20,udp,dl_dst=00:00:00:00:00:02,tp_src=5004 actions=set_queue:2,output:2
+ cookie=0x0, duration=209.249s, table=0, n_packets=328, n_bytes=13776, priority=10,dl_dst=00:00:00:00:00:01 actions=output:1
+ cookie=0x0, duration=209.236s, table=0, n_packets=5, n_bytes=406, priority=10,dl_dst=00:00:00:00:00:02 actions=output:2
+ cookie=0x0, duration=209.249s, table=0, n_packets=286075, n_bytes=25626429, priority=0 actions=CONTROLLER:65535
